@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 
-*{
+*{ /* Regras Gerais */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,28 +13,46 @@ body{
     background-color: rgb(252, 252, 252);
 }
 
-.header{
+.headerfundo{ /* Navbar Oculta */
+    position: relative;
+    padding: 1%
+}
+@media only screen and (max-width: 400px){
+    .headerfundo{ /* Navbar Oculta com mens de 400px*/
+        position: relative;
+        padding: 5%
+    }
+}
+
+
+.header{ /* NavBar */
     position: fixed;
+    text-decoration: none;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 6%;
-    background: rgb(0, 89, 255);
+    padding: 1% 6%;
+    background: rgb(67, 133, 254);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.logo{
-    font-size: 25px;
+.logo{ /* Agenda Clinica */
+    font-size: 20px;
     color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight:600;
 }
 
+nav ul{ /* Lista */
+    display: flex;
+}
+
+
 .navbar a{
-    font-size: 16px;
+    font-size:  90%;
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -42,14 +60,84 @@ body{
     transition: .3s;
 }
 
-.navbar a:hover {
+.navbar a:hover { /* Lista quando passar o mouse */
     color: rgb(190, 190, 255);
 }
 
+.menu{ /* Icone menu */
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.menu:hover{ /* Quando passar o mouse no icone menu */
+    background-color: rgba(255, 255, 255, 0.212);
+}
+
+.menu div{ /* Formato do icone menu */
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 1100px){ /* Quando a tela ficar menor de 1100px */
+    header {
+        width: 100%;
+        padding: 0 20px;
+    }
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 200px;
+        height: 100vh;
+        background-color: rgb(0, 153, 255);
+        transition: 0.2s;
+        box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.365);
+    }
+
+    #nav_check:checked ~ nav{
+        left: 0;
+    }
+
+    nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 10px;
+    }
+
+    nav ul{
+        display: block;
+        padding: 2%;
+        margin-top: 30px;
+    }
+    .menu{
+        display: block;
+    }
+}
+
+.imgprincipal{
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
 .container{
-    margin-left: 5%;
-    margin-top: 3%;
-    margin-right: 5%;
+    position: relative;
+    width: 100%;
+    padding: 5%;
     text-align: justify;
 }
 
@@ -64,6 +152,13 @@ h3{
     margin-right: 2px;
 }
 
+
+.imgrelogio img{
+    width: 250px;
+    height: 200px;
+}
+
+
 .ajuda a{
     color: black;
 }
@@ -73,6 +168,14 @@ footer{
     color: rgb(219, 238, 255);
     padding: 20px;
     font-size: 12px;
+}
+
+footer table{
+    width: 100%;
+}
+
+footer td{
+    padding: 15px;
 }
 
 footer a{

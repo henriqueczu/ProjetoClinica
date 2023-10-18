@@ -8,47 +8,59 @@
     <title>Home - Agenda Clínica</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Agenda Clínica</a>
-        
-        <nav class="navbar">
-            <a href="./projetoclinica/clinicas.html">Clínicas</a>
-            <a href="./projetoclinica/login.html">Login</a>
-            <a href="./projetoclinica/cadastro.html">Cadastro</a>
-        </nav>
 
-    </header>
+    <div class="headerfundo"> <!-- navbar -->
 
-    <img src="./projetoclinica/images/home.png" alt="freepik" width="100%">
-    <p class="ad">imagem de freepik.com</p>
+        <header class="header">
+            <input type="checkbox" id="nav_check" hidden>
+            <a href="#" class="logo">Agenda Clínica</a>
+            
+            <nav class="navbar">
+                <ul style="list-style: none;">
+                    <li>
+                        <a href="./projetoclinica/clinicas.html">Clínicas</a>
+                    </li>
+                    <li>
+                        <a href="./projetoclinica/login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="./projetoclinica/cadastro.html">Cadastro</a>
+                    </li>
+                </ul>
+            </nav>
+            <label for="nav_check" class="menu">
+                <div></div>
+                <div></div>     <!-- cada div é uma linha do menu da nav bar -->
+                <div></div>
+            </label>
+        </header>
+    </div>
+    
+        <img src="./projetoclinica/images/homee.png" alt="freepik" class="imgprincipal"> <!-- Imagem Principal -->
+        <p class="ad">imagem de freepik.com</p>
 
-    <div class="container">
-        <div class="sobrebloco">
+    <div class="container"> <!-- Fundo -->
 
-            <img src="./projetoclinica/images/relogio2.png" alt="" width="250px" height="200px" align="right">    
-
-            <div class="sobre">
+            <div class="sobre"> <!-- Seção "Sobre" -->
 
                 <h3>Uma plataforma para economizar seu tempo!</h3>
+                <div class="imgrelogio">
+                    <img src="./projetoclinica/images/relogio2.png" alt="" align="right">
+                </div>
                 <p>A Agenda Clínica é uma plataforma desenvolvida por uma pequena equipe de estudantes que acredita que utilizando a tecnologia, é possivel acelerar pequenos processos que poderiam demorar até horas para serem concluídos.</p>
-
+    
                 <br>
-
+    
                 <p>Agora você pode evitar o desconforto de esperar horas para ser atendido para agendar uma simples consulta, com a plataforma Agenda Clínica seu agendamento pode ser feito da onde estiver e quando quiser.</p>
                 <br>
-        
+            
             </div>
-        </div>
-        
-        <div class="ajudabloco">
 
-            <img src="./projetoclinica/images/celular.jpg" alt="" width="400px" align="left">
-
-            <br>
-            <br>
-
-            <div class="ajuda">
+            <div class="ajuda"> <!-- Seção "Ajuda" -->
                 
+                <img src="./projetoclinica/images/celular.jpg" alt="" width="400px" align="left">
+                <br><br>
+
                 <h3>Como utilizar a plataforma?</h3>
                 <p>Primeiro começamos pelo seu cadastro, assim podemos evitar problemas na hora de reconhecer você. Se ainda não possui cadastro clique <a href="cadastro.html">aqui</a>. Após cadastrado você pode entrar quando quiser na nossa plaforma com o seu login. Isso tambem serve para os agendamentos presenciais nos consultorios parceiros.</p>
 
@@ -59,18 +71,24 @@
                 <br>
 
                 <p>E prontinho! Agora sua consulta esta agendada. Como comprovante você pode mostrar o email enviado para você ou apresentar o código do agendamento.</p>
+                <br><br><br>
 
-                <br>
-                <br>
-                <br>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Imagens: <a href="https://br.freepik.com">FreePik</a></p>
-        <p><a href="#">Desenvolvedores</a></p>
-        <p><a href="#">Contato</a></p>
+        <table>
+            <td>
+            <p>Imagem Principal <a href="https://www.uniaoquimica.com.br/novidades/dia-do-hospital/">Uniaoquimica</a></p>
+            <p>Imagem Relogio <a href="https://br.freepik.com">FreePik</a></p>
+            <p>Imagem Celular <a href="https://br.freepik.com">FreePik</a></p>
+            </td>
+            <td>
+                <p><a href="#">Desenvolvedores</a></p>
+                <p><a href="#">Contato</a></p>
+            </td>
+        </table>
     </footer>
 </body>
 </html>
